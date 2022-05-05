@@ -1,0 +1,43 @@
+.center{
+    transform: translate(-25%, -50%);
+}
+.custom-carousel{
+    
+
+    .carousel{
+        display: none;
+    }
+}
+.buy-center{
+    margin-top: 2px;
+}
+.carousel-control-prev-icon::after{
+    display: none;
+}
+.arrow-left {
+    animation: MoveUpDown 1s linear infinite;
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+  }
+  
+  @keyframes MoveUpDown {
+    0%, 100% {
+      left: 70px;
+    }
+    50% {
+      left: 80px;
+    }
+  }
+@media screen and (max-width: 768px){
+    .wrapper{
+        margin: 0 1rem;
+        padding: 0.5rem 0;
+    }
+    .center{
+        transform: translate(10%, -50%);  
+    }
+    .arrow-left{
+        bottom: -3px;
+    }
+}

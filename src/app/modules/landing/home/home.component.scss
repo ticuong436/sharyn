@@ -1,0 +1,19 @@
+.move {
+    animation: ToTop 1s linear infinite;
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+  
+  @keyframes ToTop {
+    0%, 100% {
+        bottom: 0 ;
+    }
+    50% {
+      bottom: 10px;
+    }
+  }
+ 
+  .scroll-to-top{
+      border: 2px solid black;
+  }

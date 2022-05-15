@@ -1321,46 +1321,48 @@
     }
 
     .mat-tab-header {
-        border-bottom: none !important;
+        // border-bottom: none !important;
 
         .mat-tab-label-container {
-            padding: 0 24px;
+            // padding: 0 24px;
 
             .mat-tab-list {
 
-                .mat-tab-labels {
+                // .mat-tab-labels {
 
-                    .mat-tab-label {
-                        min-width: 0 !important;
-                        height: 40px !important;
-                        padding: 0 20px !important;
-                        border-radius: 9999px !important;
-                        @apply text-secondary;
+                //     .mat-tab-label {
+                //         min-width: 0 !important;
+                //         height: 40px !important;
+                //         padding: 0 20px !important;
+                //         border-radius: 9999px ;
+                //         @apply text-secondary;
 
-                        &.mat-tab-label-active {
-                            @apply bg-gray-700 bg-opacity-10 dark:bg-gray-50 dark:bg-opacity-10 #{'!important'};
-                            @apply text-default #{'!important'};
-                        }
+                //         &.mat-tab-label-active {
+                //             @apply bg-gray-700 bg-opacity-10 dark:bg-gray-50 dark:bg-opacity-10 ;
+                //             @apply text-default ;
+                //         }
 
-                        + .mat-tab-label {
-                            margin-left: 4px;
-                        }
+                //         + .mat-tab-label {
+                //             margin-left: 4px;
+                //         }
 
-                        .mat-tab-label-content {
-                            line-height: 20px;
-                        }
-                    }
-                }
+                //         .mat-tab-label-content {
+                //             line-height: 20px;
+                //         }
+                //     }
+                // }
 
                 .mat-ink-bar {
-                    display: none !important;
+                    // display: none !important;
+                    background-color: black !important;
+                    height: 3px;
                 }
             }
         }
     }
 
     .mat-tab-body-content {
-        padding: 24px;
+        // padding: 24px;
     }
 }
 

@@ -15,6 +15,9 @@ import { ChinhsachBaomatComponent } from '../chinhsach-baomat/chinhsach-baomat.c
 import { ChinhsachMuabanComponent } from '../chinhsach-muaban/chinhsach-muaban.component';
 import { ChinhsachTrahangComponent } from '../chinhsach-trahang/chinhsach-trahang.component';
 import { MaterialExampleModule } from 'material.example';
+import { SanphamComponent } from '../sanpham/sanpham.component';
+import { BlogComponent } from '../blog/blog.component';
+import { SanphamChitietComponent } from '../sanpham/sanpham-chitiet/sanpham-chitiet.component';
 
 @NgModule({
     declarations: [
@@ -27,6 +30,9 @@ import { MaterialExampleModule } from 'material.example';
         ChinhsachBaomatComponent,
         ChinhsachMuabanComponent,
         ChinhsachTrahangComponent,
+        SanphamComponent,
+        BlogComponent,
+        SanphamChitietComponent
     ],
     imports     : [
         RouterModule.forChild(landingHomeRoutes),

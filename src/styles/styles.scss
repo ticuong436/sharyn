@@ -6,11 +6,26 @@
 @import "~swiper/css/pagination";
 @import "~swiper/css/navigation";
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     border: 1px solid #000;
     background: inherit;
     opacity: 1;
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     background: #000 !important;
+}
+
+.mat-tab-labels {
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+    .mat-tab-label {
+        font-size: 1.5rem;
+
+      
+    }
+    .mat-ink-bar{ 
+        height: 3px;
+        background-color: #000 !important;
+    }
+    
 }

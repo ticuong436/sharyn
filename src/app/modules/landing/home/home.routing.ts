@@ -5,6 +5,9 @@ import { ChinhsachMuabanComponent } from '../chinhsach-muaban/chinhsach-muaban.c
 import { ChinhsachThanhtoanComponent } from '../chinhsach-thanhtoan/chinhsach-thanhtoan.component';
 import { ChinhsachTrahangComponent } from '../chinhsach-trahang/chinhsach-trahang.component';
 import { HomepageComponent } from '../homepage/homepage.component';
+import { SanphamComponent } from '../sanpham/sanpham.component';
+import { BlogComponent } from '../blog/blog.component';
+import { SanphamChitietComponent } from '../sanpham/sanpham-chitiet/sanpham-chitiet.component';
 
 export const landingHomeRoutes: Route[] = [
     {
@@ -16,6 +19,11 @@ export const landingHomeRoutes: Route[] = [
             {path:'chinh-sach-thanh-toan', component:ChinhsachThanhtoanComponent},
             {path:'chinh-sach-mua-ban', component:ChinhsachMuabanComponent},
             {path:'chinh-sach-tra-hang', component:ChinhsachTrahangComponent},
+            {path:'san-pham', component:SanphamComponent},
+            {path:'san-pham/:slug', component:SanphamChitietComponent},
+            {path:'blog', component:BlogComponent},
+
+
 
 
 

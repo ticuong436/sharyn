@@ -20,7 +20,7 @@ export class CarouselComponent implements OnInit {
       speed:1000,
 
       autoplay: {
-        delay: 5000,
+        delay: 3000,
         disableOnInteraction: false
       },
     }

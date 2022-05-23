@@ -1,0 +1,32 @@
+.item-product{
+    height: 500px;
+    .img-overlay {
+        opacity: 0;
+        transition: 0.3s;
+      }
+      &:hover .img-overlay {
+        opacity: 0.8;
+        transition: 0.3s;
+        background-color: rgb(110, 108, 106);
+      }
+}
+.sale-popup{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+.center-info {
+  transform: translateY(-50%);
+}
+.banner-text{
+    left: 33%;
+    bottom: 5rem;
+}
+@media screen and (max-width: 768px){
+    .banner-text{
+        left: 50%;
+        bottom: inherit;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

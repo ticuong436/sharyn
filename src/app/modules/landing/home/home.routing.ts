@@ -8,6 +8,7 @@ import { HomepageComponent } from '../homepage/homepage.component';
 import { SanphamComponent } from '../sanpham/sanpham.component';
 import { BlogComponent } from '../blog/blog.component';
 import { SanphamChitietComponent } from '../sanpham/sanpham-chitiet/sanpham-chitiet.component';
+import { ComboDieuTriComponent } from '../combo-dieu-tri/combo-dieu-tri.component';
 
 export const landingHomeRoutes: Route[] = [
     {
@@ -22,6 +23,8 @@ export const landingHomeRoutes: Route[] = [
             {path:'san-pham', component:SanphamComponent},
             {path:'san-pham/:slug', component:SanphamChitietComponent},
             {path:'blog', component:BlogComponent},
+            {path:'combo-dieu-tri', component:ComboDieuTriComponent},
+
 
 
 

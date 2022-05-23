@@ -17,3 +17,65 @@
   .scroll-to-top{
       border: 2px solid black;
   }
+
+  .input-group-text{
+    border: none;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    padding: inherit;
+}
+.form-control{
+    padding: inherit;
+    border-radius: 20px;
+}
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu){
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.links a{
+    color: #000;
+    display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  transition: all 0.3s ease-in-out;
+}
+
+.links {
+    .line-hover:before{
+        content: '';
+        background: #000;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .line-hover:hover {
+        background-position: 0;
+       }
+       
+       .line-hover:hover::before{
+         width: 100%;
+       }
+}
+.icons li:hover{
+    img{
+        transform: scale(1.2);
+        transition: 0.3s;
+    }
+}
+.icons li{
+    img{
+        cursor: pointer;
+        transition: 0.3s;
+    }
+}
+@media screen and (max-width: 768px){
+    .wrapper{
+        margin: 0 1rem;
+        padding: 0.5rem 0;
+    }
+}

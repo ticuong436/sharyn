@@ -94,6 +94,9 @@ const config = {
             green      : colors.green,
             teal       : colors.teal,
             blue       : colors.blue,
+            blue:{
+                500 : '#00a8e6'
+            },
             indigo     : colors.indigo,
             purple     : colors.purple
         },

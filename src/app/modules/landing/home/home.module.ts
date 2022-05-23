@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -18,6 +18,18 @@ import { MaterialExampleModule } from 'material.example';
 import { SanphamComponent } from '../sanpham/sanpham.component';
 import { BlogComponent } from '../blog/blog.component';
 import { SanphamChitietComponent } from '../sanpham/sanpham-chitiet/sanpham-chitiet.component';
+import { ThanhphanComponent } from '../sanpham/sanpham-chitiet/thanhphan/thanhphan.component';
+import { HieuquaComponent } from '../sanpham/sanpham-chitiet/hieuqua/hieuqua.component';
+import { CachsudungComponent } from '../sanpham/sanpham-chitiet/cachsudung/cachsudung.component';
+import localeDe from '@angular/common/locales/de';
+import localeDeExtra from '@angular/common/locales/extra/de';
+import { registerLocaleData } from '@angular/common';
+import { DanhgiaComponent } from '../sanpham/sanpham-chitiet/danhgia/danhgia.component';
+import { ComboDieuTriComponent } from '../combo-dieu-tri/combo-dieu-tri.component';
+import { CurrencyPipe } from '@angular/common';
+import { CustomModule } from '../custom/custom.module';
+
+registerLocaleData(localeDe, 'de-DE', localeDeExtra);
 
 @NgModule({
     declarations: [
@@ -32,7 +44,19 @@ import { SanphamChitietComponent } from '../sanpham/sanpham-chitiet/sanpham-chit
         ChinhsachTrahangComponent,
         SanphamComponent,
         BlogComponent,
-        SanphamChitietComponent
+        SanphamChitietComponent,
+        ThanhphanComponent,
+        HieuquaComponent,
+        CachsudungComponent,
+        DanhgiaComponent,
+        ComboDieuTriComponent
+    ],
+    providers: [
+        {
+            provide: LOCALE_ID,
+            useValue: 'de-DE',
+        },
+        CurrencyPipe,
     ],
     imports     : [
         RouterModule.forChild(landingHomeRoutes),
@@ -41,6 +65,7 @@ import { SanphamChitietComponent } from '../sanpham/sanpham-chitiet/sanpham-chit
         SharedModule,
         SwiperModule,
         MaterialExampleModule,
+        CustomModule
 
     ]
 })

@@ -32,6 +32,14 @@ export class SanphamService {
             )
         );
     }
+    getProduct() {
+        return this.http.get(this.urlApi).pipe(
+            map((products) => {
+                this._products.next(products);
+                return products;
+            })
+        );
+    }
     updateProduct(data) {
         return this.products$.pipe(
             take(1),
@@ -55,13 +63,9 @@ export class SanphamService {
                 )
             )
         );
-        // getMenu() {
-        //     return this.http.get('https://v2api.timona.edu.vn/menu').pipe(
-        //         map((menu) => {
-        //             this._menu.next(menu);
-        //             return menu;
-        //         })
-        //     );
-        // }
+       
+    }
+    deleteSanpham(data){
+
     }
 }

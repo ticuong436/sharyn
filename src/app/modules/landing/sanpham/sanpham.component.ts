@@ -52,6 +52,7 @@ export class SanphamComponent implements OnInit {
             status: 'Promo',
             slug: 'miracle-ex-spicule',
             price: 890000,
+            priceold:1780000,
             image: '../../../../assets/images/SẢN PHẨM/Miracle---01.jpg',
             id: 1,
         },
@@ -63,6 +64,8 @@ export class SanphamComponent implements OnInit {
             status: 'Best Seller',
             slug: 'dna-sharyn',
             price: 1200000,
+            priceold:2000000,
+
             image: '../../../../assets/images/SẢN PHẨM/DNA.jpg',
             id: 2,
         },
@@ -74,6 +77,8 @@ export class SanphamComponent implements OnInit {
             status: 'Promo',
             slug: 'ha-ampoule',
             price: 590000,
+            priceold:1580000,
+
             image: '../../../../assets/images/SẢN PHẨM/HA.jpg',
             id: 3,
         },
@@ -85,6 +90,8 @@ export class SanphamComponent implements OnInit {
             status: 'Best Seller',
             slug: 'cream-4in1',
             price: 800000,
+            priceold:1600000,
+
             image: '../../../../assets/images/SẢN PHẨM/4in1.jpg',
             id: 4,
         },

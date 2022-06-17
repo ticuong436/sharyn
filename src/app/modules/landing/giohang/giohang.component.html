@@ -1,0 +1,347 @@
+<div class="flex flex-col lg:max-w-6xl lg:mx-auto lg:px-8">
+    <nav class="md:flex pt-5 hidden" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+                <a
+                    href="#"
+                    class="uppercase inline-flex items-center font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                >
+                    <svg
+                        class="mr-2 w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                        ></path>
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <!-- <li>
+            <div class="flex items-center">
+              <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+              <a href="#" class="ml-1  font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white">Projects</a>
+            </div>
+          </li> -->
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <svg
+                        class="w-6 h-6 text-gray-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                        ></path>
+                    </svg>
+                    <span
+                        class="ml-1 font-medium text-gray-400 md:ml-2 dark:text-gray-500 uppercase"
+                        >Giỏ hàng</span
+                    >
+                </div>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="py-10 mx-3 md:mx-0">
+        <div class="md:flex">
+            <div class="md:w-3/4 md:mr-4">
+                <h3 class="text-2xl text-center uppercase mb-0">
+                    giỏ hàng của bạn
+                </h3>
+                <div class="relative pb-3">
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin"
+                            >Tất cả sản phẩm (04)</mat-checkbox
+                        >
+                    </section>
+                    <div class="absolute w-full h-px bg-black bottom-0"></div>
+                </div>
+
+                <div class="flex relative py-7 items-center justify-between">
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin"> </mat-checkbox>
+                    </section>
+                    <div class="w-28 h-28 bg-red-100"></div>
+                    <div class="flex w-64">
+                        <div>
+                            <span class="text-lg font-bold uppercase des"
+                                >Miracle ex spicule
+                            </span>
+                            <p class="text-md uppercase des">
+                                Chống lão hóa, mờ sẹo thâm mụn
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="number-input flex items-center rounded-3xl border-none w-32"
+                    >
+                        <button
+                            class="text-md text-black border border-black"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        ></button>
+                        <input
+                            class="quantity w-12 border border-black flex item-center justify-center text-center lg:text-lg text-md font-bold"
+                            min="0"
+                            name="quantity"
+                            value="1"
+                            type="number"
+                        />
+                        <button
+                            class="plus text-black border border-black"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        ></button>
+                    </div>
+                    <div class="w-20">
+                        <p class="text-sm">Đơn giá:</p>
+                        <span class="text-lg">800.000đ</span>
+                    </div>
+                    <div class="w-20">
+                        <p class="text-sm">Thành tiền:</p>
+                        <span class="text-lg text-blue-500 font-bold"
+                            >800.000đ</span
+                        >
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-400 flex flex-col justify-center"
+                    >
+                        <span class="material-icons text-gray-400">
+                            delete
+                        </span>
+                    </div>
+                    <div class="absolute w-full h-px bg-black bottom-0"></div>
+                </div>
+                <div class="flex relative py-7 items-center justify-between">
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin"> </mat-checkbox>
+                    </section>
+                    <div class="w-28 h-28 bg-red-100"></div>
+                    <div class="flex w-64">
+                        <div>
+                            <span class="text-lg font-bold uppercase des"
+                                >Miracle ex spicule
+                            </span>
+                            <p class="text-md uppercase des">
+                                Chống lão hóa, mờ sẹo thâm mụn
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="number-input flex items-center rounded-3xl border-none w-32"
+                    >
+                        <button
+                            class="text-md text-black border border-black"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        ></button>
+                        <input
+                            class="quantity w-12 border border-black flex item-center justify-center text-center lg:text-lg text-md font-bold"
+                            min="0"
+                            name="quantity"
+                            value="1"
+                            type="number"
+                        />
+                        <button
+                            class="plus text-black border border-black"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        ></button>
+                    </div>
+                    <div class="w-20">
+                        <p class="text-sm">Đơn giá:</p>
+                        <span class="text-lg">800.000đ</span>
+                    </div>
+                    <div class="w-20">
+                        <p class="text-sm">Thành tiền:</p>
+                        <span class="text-lg text-blue-500 font-bold"
+                            >800.000đ</span
+                        >
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-400 flex flex-col justify-center"
+                    >
+                        <span class="material-icons text-gray-400">
+                            delete
+                        </span>
+                    </div>
+                    <div class="absolute w-full h-px bg-black bottom-0"></div>
+                </div>
+                <div class="flex relative py-7 items-center justify-between">
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin"> </mat-checkbox>
+                    </section>
+                    <div class="w-28 h-28 bg-red-100"></div>
+                    <div class="flex w-64">
+                        <div>
+                            <span class="text-lg font-bold uppercase des"
+                                >Miracle ex spicule
+                            </span>
+                            <p class="text-md uppercase des">
+                                Chống lão hóa, mờ sẹo thâm mụn
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="number-input flex items-center rounded-3xl border-none w-32"
+                    >
+                        <button
+                            class="text-md text-black border border-black"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        ></button>
+                        <input
+                            class="quantity w-12 border border-black flex item-center justify-center text-center lg:text-lg text-md font-bold"
+                            min="0"
+                            name="quantity"
+                            value="1"
+                            type="number"
+                        />
+                        <button
+                            class="plus text-black border border-black"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        ></button>
+                    </div>
+                    <div class="w-20">
+                        <p class="text-sm">Đơn giá:</p>
+                        <span class="text-lg">800.000đ</span>
+                    </div>
+                    <div class="w-20">
+                        <p class="text-sm">Thành tiền:</p>
+                        <span class="text-lg text-blue-500 font-bold"
+                            >800.000đ</span
+                        >
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-400 flex flex-col justify-center"
+                    >
+                        <span class="material-icons text-gray-400">
+                            delete
+                        </span>
+                    </div>
+                    <div class="absolute w-full h-px bg-black bottom-0"></div>
+                </div>
+                <div class="flex relative py-7 items-center justify-between">
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin"> </mat-checkbox>
+                    </section>
+                    <div class="w-28 h-28 bg-red-100"></div>
+                    <div class="flex w-64">
+                        <div>
+                            <span class="text-lg font-bold uppercase des"
+                                >Miracle ex spicule
+                            </span>
+                            <p class="text-md uppercase des">
+                                Chống lão hóa, mờ sẹo thâm mụn
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="number-input flex items-center rounded-3xl border-none w-32"
+                    >
+                        <button
+                            class="text-md text-black border border-black"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        ></button>
+                        <input
+                            class="quantity w-12 border border-black flex item-center justify-center text-center lg:text-lg text-md font-bold"
+                            min="0"
+                            name="quantity"
+                            value="1"
+                            type="number"
+                        />
+                        <button
+                            class="plus text-black border border-black"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        ></button>
+                    </div>
+                    <div class="w-20">
+                        <p class="text-sm">Đơn giá:</p>
+                        <span class="text-lg">800.000đ</span>
+                    </div>
+                    <div class="w-20">
+                        <p class="text-sm">Thành tiền:</p>
+                        <span class="text-lg text-blue-500 font-bold"
+                            >800.000đ</span
+                        >
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-400 flex flex-col justify-center"
+                    >
+                        <span class="material-icons text-gray-400">
+                            delete
+                        </span>
+                    </div>
+                    <div class="absolute w-full h-px bg-black bottom-0"></div>
+                </div>
+                <div class="flex justify-end pt-3">
+                    <div>
+                        <div class="flex items-center">
+                            <p class="text-sm mr-5">Tạm tính:</p>
+                            <span class="text-lg text-blue-500 font-bold"
+                                >800.000đ</span
+                            >
+                        </div>
+                        <p class="text-sm text-right">(Đã bao gồm VAT)</p>
+                    </div>
+                    <div class="">
+
+                    </div>
+                </div>
+                <div class="flex justify-end pt-5">
+                    <div class="flex">
+                        <div
+                            class="mr-1 border border-blue-500 w-56 py-1 justify-center text-blue-500 text-lg flex items-center"
+                        >
+                            <span class="material-icons text-blue-500 mr-3">
+                                west
+                            </span>
+                            <span> Tiếp tục mua hàng </span>
+                        </div>
+
+                        <div
+                            class="ml-1 bg-blue-500 text-center font-bold py-1 w-56 text-lg text-white uppercase"
+                        >
+                            đặt hàng
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/4 pt-7">
+                <h3 class="text-white bg-gray-800 py-2 pl-5 uppercase w-full">
+                    thông tin đơn hàng
+                </h3>
+                <div class="py-3 pl-5 relative">
+                    <div class="flex justify-between items-center">
+                        <span class="text-md font-bold">Tạm tinh:</span>
+                        <span class="text-lg">800.000 đ</span>
+                    </div>
+                    <div class="flex justify-between items-center pt-2">
+                        <span class="text-md font-bold">Giảm giá:</span>
+                        <span class="text-lg">-0 đ</span>
+                    </div>
+                    <div
+                        class="absolute left-0 w-full h-px bg-black bottom-0"
+                    ></div>
+                </div>
+                <div class="py-3 pl-5 relative">
+                    <div class="flex justify-between items-center">
+                        <span class="text-md font-bold">Tổng cộng:</span>
+                        <span class="text-lg text-blue-500 font-bold"
+                            >800.000 đ</span
+                        >
+                    </div>
+                    <div class="flex justify-between items-center pt-2">
+                        <span class="text-sm">(Đã bao gồm VAT)</span>
+                    </div>
+                </div>
+                <button
+                    class="w-full py-1 text-center text-lg font-bold text-white bg-blue-500 uppercase"
+                >
+                    Đặt Hàng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,6 +18,8 @@ import { AngularFireModule} from '@angular/fire/compat'
 import {AngularFireDatabaseModule} from '@angular/fire/compat/database';
 import {AngularFireStorageModule } from '@angular/fire/compat/storage';
 
+
+
 const routerConfig: ExtraOptions = {
     preloadingStrategy       : PreloadAllModules,
     scrollPositionRestoration: 'enabled'
@@ -26,7 +28,7 @@ const routerConfig: ExtraOptions = {
 @NgModule({
     declarations: [
         AppComponent,
-        
+ 
     ],
     imports     : [
         BrowserModule,

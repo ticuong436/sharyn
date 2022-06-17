@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { BaivietService } from './baiviet.service';
-import * as customBuild from '../../ckCustomBuild/build/ckEditor'
+import * as customBuild from '../../../ckCustomBuild/build/ckEditor'
 @Component({
   selector: 'app-baiviet',
   templateUrl: './baiviet.component.html',

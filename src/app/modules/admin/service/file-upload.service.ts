@@ -9,7 +9,7 @@ import { FileUpload } from '../models/file-upload.model';
   providedIn: 'root'
 })
 export class FileUploadService {
-  private basePath = '/uploads';
+  private basePath = '/test';
   private _thumb: BehaviorSubject<any | null> = new BehaviorSubject(null);
   get _thumb$(): Observable<any>{
     return this._thumb.asObservable();

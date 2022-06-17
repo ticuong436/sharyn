@@ -1,0 +1,10 @@
+.centerX{
+    transform: translateX(-50%);
+    left: 50%;
+}
+.swiper-button-prev, .swiper-button-next{
+    display: none;
+}
+.swiper-wrapper{
+    align-items: center;
+}

@@ -73,6 +73,19 @@
         transition: 0.3s;
     }
 }
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1001;  
+    &.fixed {
+      // Styles for a fixed header
+    }
+  }
+  
+  main {
+      padding-top: 170px; // Your header height + some slack
+  }
 @media screen and (max-width: 768px){
     .wrapper{
         margin: 0 1rem;

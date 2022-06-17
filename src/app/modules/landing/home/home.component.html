@@ -24,11 +24,15 @@
                     <mat-expansion-panel>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
-                                <p class="text-lg uppercase py-4 rounded-md text-sm font-medium">cửa hàng</p>
+                                <p
+                                    class="text-lg uppercase py-4 rounded-md text-sm font-medium"
+                                >
+                                    cửa hàng
+                                </p>
                             </mat-panel-title>
                         </mat-expansion-panel-header>
 
-                        <div class="pl-3 flex flex-col ">
+                        <div class="pl-3 flex flex-col">
                             <a
                                 routerLink="san-pham"
                                 class="text-lg uppercase py-4 rounded-md text-sm font-medium"
@@ -56,7 +60,7 @@
                 >
 
                 <a
-                    routerLink=""
+                    routerLink="kham-da"
                     class="text-lg uppercase py-4 rounded-md text-sm font-medium"
                     aria-current="page"
                     (click)="drawer.toggle()"
@@ -67,8 +71,9 @@
     </mat-drawer>
 
     <div class="example-sidenav-content flex flex-col relative">
-        <nav
+        <header
             class="flex items-center justify-between lg:mx-16 wrapper lg:py-6 relative"
+            id="header"
         >
             <div class="block lg:hidden">
                 <button
@@ -130,7 +135,7 @@
                         </ng-template>
 
                         <ul
-                            class="dropdown-menu min-w-max absolute bg-white z-50 float-left py-2 list-none text-left rounded-lg shadow-lg m-0 bg-clip-padding border-none"
+                            class="dropdown-menu min-w-max absolute bg-white mt-2 z-50 float-left py-2 list-none text-left rounded-lg shadow-lg m-0 bg-clip-padding border-none"
                             [ngClass]="{ hidden: isShow }"
                             (mouseleave)="toggleMenu()"
                             *ngIf="itemmenu.children.length > 0"
@@ -171,24 +176,28 @@
                             class="flex items-center justify-center h-10 m-0 pl-0 icons"
                         >
                             <li class="w-8 h-3/4 lg:mr-3 mr-1">
-                                <img
-                                    src="../../../assets/images/homepage/HOME_SHARYN_1908-(2).png"
-                                    class="w-full h-full"
-                                    alt=""
-                                />
+                                <a routerLink="dang-nhap">
+                                    <img
+                                        src="../../../assets/images/homepage/HOME_SHARYN_1908-(2).png"
+                                        class="w-full h-full"
+                                        alt=""
+                                    />
+                                </a>
                             </li>
 
                             <li class="w-8 h-3/4 lg:mr-3 relative">
-                                <img
-                                    src="../../../assets/images/homepage/HOME_SHARYN_1908-(3).png"
-                                    class="w-full h-full"
-                                    alt=""
-                                />
-                                <span
-                                    class="absolute top-0 inline-flex items-center justify-center px-2 py-1 font-bold leading-none text-red-100 bg-red-600 rounded-full"
-                                    style="font-size: 8px; right: -5px"
-                                    >9</span
-                                >
+                                <a routerLink="giohang">
+                                    <img
+                                        src="../../../assets/images/homepage/HOME_SHARYN_1908-(3).png"
+                                        class="w-full h-full"
+                                        alt=""
+                                    />
+                                    <span
+                                        class="absolute top-0 inline-flex items-center justify-center px-2 py-1 font-bold leading-none text-red-100 bg-red-600 rounded-full"
+                                        style="font-size: 8px; right: -5px"
+                                        >9</span
+                                    >
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -230,7 +239,7 @@
                 class="absolute w-full bg-black bottom-0 hidden lg:block"
                 style="height: 1px"
             ></div>
-        </nav>
+        </header>
         <router-outlet></router-outlet>
 
         <app-footer></app-footer>

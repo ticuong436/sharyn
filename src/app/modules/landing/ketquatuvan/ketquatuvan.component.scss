@@ -1,0 +1,47 @@
+.des {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 4.2rem;
+}
+.combo {
+    border: none;
+    transition: ease all 0.3s;
+    .xemthem {
+        bottom: -10px;
+        opacity: 0;
+        transition: 0.3s;
+    }
+}
+.combo:hover {
+    border: 1px solid rgb(130, 129, 129);
+    transition: ease all 0.3s;
+
+    .xemthem {
+        bottom: 0;
+        opacity: 1;
+        transition: 0.3s;
+    }
+}
+@media screen and (max-width: 768px) {
+    .border-bottom {
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+.center-info {
+    transform: translateY(-50%);
+  }
+.banner-text{
+    left: 33%;
+    bottom: 5rem;
+}
+@media screen and (max-width: 768px){
+    .banner-text{
+        left: 50%;
+        bottom: inherit;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

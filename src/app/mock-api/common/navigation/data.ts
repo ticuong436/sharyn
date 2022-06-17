@@ -16,6 +16,29 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'heroicons_outline:chart-pie',
         link : '/admin/san-pham'
     },
+    {
+        id   : 'danhmuc',
+        title: 'Danh mục',
+        type : 'basic',
+        icon : 'heroicons_outline:chart-pie',
+        link : '/admin/danh-muc'
+    },
+    {
+        id   : 'Sanphamchitiet',
+        title: 'Sản phẩm chi tiết',
+        type : 'basic',
+        icon : 'heroicons_outline:chart-pie',
+        link : '/admin/sanphamchitiet'
+    },
+    {
+        
+        id   : 'ThemeSanphamchitiet',
+        title: 'Theme sản phẩm chi tiết',
+        type : 'basic',
+        icon : 'heroicons_outline:chart-pie',
+        link : '/admin/themesanphamchitiet'
+    }
+    
     
 ];
 export const compactNavigation: FuseNavigationItem[] = [

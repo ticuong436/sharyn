@@ -1,0 +1,15 @@
+.center-info {
+    transform: translateY(-50%);
+  }
+.banner-text{
+    left: 33%;
+    bottom: 5rem;
+}
+@media screen and (max-width: 768px){
+    .banner-text{
+        left: 50%;
+        bottom: inherit;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

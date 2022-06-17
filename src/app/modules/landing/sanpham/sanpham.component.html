@@ -1,4 +1,4 @@
-<div class="flex flex-col lg:max-w-7xl lg:mx-auto lg:px-8">
+<div class="flex flex-col lg:max-w-6xl lg:mx-auto lg:px-8">
     <nav class="md:flex pt-5 hidden" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-3">
             <li class="inline-flex items-center">
@@ -67,11 +67,11 @@
                     style="transform: translateY(-50%)"
                 >
                     <div class="">
-                        <h2
+                        <h3
                             class="font-bold text-white lg:text-5xl text-3xl uppercase title"
                         >
                             sản phẩm
-                        </h2>
+                        </h3>
                         <div
                             class="uppercase lg:text-3xl text-lg relative"
                             id="split-text"
@@ -120,7 +120,7 @@
                         <div
                             class=" flex flex-col items-center h-2/5 justify-between"
                         >
-                            <p class="font-bold text-3xl uppercase text-center">
+                            <p class="font-bold text-2xl uppercase text-center pt-3">
                                 {{ item.name }}
                             </p>
                             <span class="uppercase text-lg text-center">
@@ -147,9 +147,9 @@
     <div class="product py-5 mx-3 md:mx-0">
         <div class="flex flex-col more-hover">
             <div class="flex mb-3">
-                <h2 class="text-2xl text-blue-500 uppercase mb-0 font-bold">
+                <h3 class="text-2xl text-blue-500 uppercase mb-0 font-bold">
                     GỢI Ý DÀNH RIÊNG CHO BẠN
-                </h2>
+                </h3>
             </div>
             <div class="w-full bg-black" style="height: 1px"></div>
         </div>
@@ -172,7 +172,7 @@
                     </div>
                     <div class="pt-3">
                         <div class="relative">
-                            <p class="font-bold uppercase text-xs md:text-base">
+                            <p class="font-bold uppercase text-xs md:text-md">
                                 {{ item.name }}
                             </p>
 
@@ -203,48 +203,7 @@
             >
         </div> -->
     </div>
-    <div class="pt-10">
-        <div class="flex w-full lg:h-96 h-80 relative">
-            <img
-                src="../../../../assets/images/SẢN PHẨM/Banner-02.jpg"
-                class="w-full h-full absolute left-0 top-0 hidden lg:block"
-                alt=""
-            />
-            <img
-                src="../../../../assets/images/SẢN PHẨM/CHITIET-SANPHAM_SHARYN_1908-(file-rax).png"
-                class="w-full h-full absolute left-0 top-0 lg:hidden"
-                alt=""
-            />
-
-            <div class="w-1/2 relative"></div>
-            <div class="w-1/2 relative">
-                <div
-                    class="absolute lg:left-8 top-1/2 lg:w-2/4 center-info w-full"
-                >
-                    <span
-                        class="lg:text-2xl text-xl text-blue-500 uppercase font-bold"
-                        >bạn có hẹn<br class="lg:hidden" />
-                        tư vấn online<br />
-                        cùng sharyn ?</span
-                    >
-
-                    <div class="pt-3 pb-3">
-                        <input
-                            type="text"
-                            placeholder="SỐ ĐIỆN THOẠI"
-                            id="small-input"
-                            class="block px-3 lg:py-2 py-1 text-xs lg:text-sm lg:w-full w-3/4 text-gray-900 bg-gray-50 rounded-2xl border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        />
-                    </div>
-                    <div class="">
-                        <a
-                            href=""
-                            class="text-white text-sm lg:text-xs uppercase px-4 py-2 bg-blue-500 rounded-xl font-bold"
-                            >tư vấn ngay</a
-                        >
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="py-10">
+        <app-banner-form></app-banner-form>
     </div>
 </div>

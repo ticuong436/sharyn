@@ -1,0 +1,127 @@
+<div class="flex flex-col lg:max-w-6xl lg:mx-auto lg:px-8">
+    <nav class="md:flex pt-5 hidden" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+                <a
+                    href="#"
+                    class="uppercase inline-flex items-center font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                >
+                    <svg
+                        class="mr-2 w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                        ></path>
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <!-- <li>
+            <div class="flex items-center">
+              <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+              <a href="#" class="ml-1  font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white">Projects</a>
+            </div>
+          </li> -->
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <svg
+                        class="w-6 h-6 text-gray-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                        ></path>
+                    </svg>
+                    <span
+                        class="ml-1 font-medium text-gray-400 md:ml-2 dark:text-gray-500 uppercase"
+                        >tư vấn online</span
+                    >
+                </div>
+            </li>
+        </ol>
+    </nav>
+    <div class="md:py-20 py-10 mx-5 md:mx-0 tinhtrang">
+        <swiper [navigation]="true"  class="mySwiper">
+            <ng-template swiperSlide >
+                <div class="flex flex-col items-center justify-center">
+                    <div>
+                        <div class="relative mb-5">
+                            <h3 class="md:text-2xl text-lg px-3 uppercase text-center">
+                                Tình trạng da hiện tại của bạn?
+                            </h3>
+                            <div
+                                class="absolute h-px md:w-full w-72 px-5 bottom-0 bg-black centerX"
+                            ></div>
+                        </div>
+                        <div class="mx-auto ">
+                            <div
+                                class="text-center delay-75 mb-3 hover:bg-blue-500 hover:text-white md:text-2xl text-lg px-3 cursor-pointer py-1 font-bold uppercase md:px-5 w-full rounded-2xl border border-black {{
+                                    iTinhtrang == i
+                                        ? 'bg-blue-500 text-white'
+                                        : ''
+                                }}"
+                                *ngFor="let item of tinhtrang; let i = index"
+                                (click)="getTinhtrang(i)"
+                            >
+                                {{ item }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-10">
+                        <span
+                            class="material-icons rounded-full border border-black p-1 cursor-pointer"
+                            (click)="swipeNext()"
+                        >
+                            east
+                        </span>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide >
+                <div class="flex flex-col items-center justify-center h-full">
+                    <div>
+                        <div class="relative mb-5">
+                            <h3 class="md:text-2xl text-lg px-3 uppercase text-center">
+                                Da bạn đang gặp vấn đề gì ?
+                            </h3>
+                            <div
+                                class="absolute h-px w-72 bottom-0 bg-black centerX"
+                            ></div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div
+                                class="option text-center delay-75 mb-3 hover:bg-blue-500 hover:text-white md:text-2xl text-lg px-3 cursor-pointer py-1 font-bold uppercase w-full md:px-5 rounded-2xl border border-black"
+                                *ngFor="let item of vande; let i =index"
+                                (click)="getVande(i)" 
+                                [ngClass]="{'bg-blue-500 text-white': iVande[i] == true}"
+                            >
+                                {{ item }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-10 py-5 flex flex-col">
+                        <a
+                            class="text-center md:text-2xl text-lg px-3 cursor-pointer py-1 font-bold uppercase w-72 rounded-2xl border border-black"
+                            routerLink="/ket-qua-tu-van"
+                        >
+                            tư vấn ngay
+                        </a>
+                    </div>
+                    <span
+                        class="material-icons rounded-full border border-black p-1 cursor-pointer"
+                        (click)="swipePrev()"
+                    >
+                        west
+                    </span>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</div>

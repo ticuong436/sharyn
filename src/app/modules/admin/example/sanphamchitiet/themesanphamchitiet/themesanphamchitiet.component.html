@@ -1,0 +1,164 @@
+<div class="container px-10">
+    <form class="w-full pt-10" [formGroup]="themeSanphamchitietForm">
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    for="grid-first-name"
+                >
+                    Tên Theme
+                </label>
+                <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-first-name"
+                    type="text"
+                    placeholder="Theme Sản phẩm chi tiết"
+                    [formControlName]="'name'"
+                    name="name"
+                />
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+                <label
+                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    for="grid-password"
+                >
+                    Giới thiệu
+                </label>
+                <ckeditor
+                    [editor]="Editor"
+                    #editer
+                    [config]="config"
+                    [formControlName]="'gioithieu'"
+                ></ckeditor>
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+                <label
+                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    for="grid-password"
+                >
+                    Thành phần
+                </label>
+                <ckeditor
+                    [editor]="Editor"
+                    (ready)="onReady($event)"
+                    #editer
+                    [config]="config"
+                    [formControlName]="'thanhphan'"
+                ></ckeditor>
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+                <label
+                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    for="grid-password"
+                >
+                    Hiệu quả
+                </label>
+                <ckeditor
+                    [editor]="Editor"
+                    (ready)="onReady($event)"
+                    #editer
+                    [config]="config"
+                    [formControlName]="'hieuqua'"
+                ></ckeditor>
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+                <label
+                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    for="grid-password"
+                >
+                    Cách sử dụng
+                </label>
+                <ckeditor
+                    [editor]="Editor"
+                    (ready)="onReady($event)"
+                    #editer
+                    [config]="config"
+                    [formControlName]="'cachsudung'"
+                ></ckeditor>
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <mat-form-field
+            class="fuse-mat-emphasized-affix w-80"
+            appearance="fill"
+        >
+            <span matPrefix>Chọn Sản Phẩm</span>
+            <mat-select (selectionChange)="onSelectThemeSanphamchitiet($event.value)">
+                <mat-option
+                    [value]="item"
+                    *ngFor="let item of themes"
+                    >{{ item.name ? item.name : "" }}</mat-option
+                >
+            </mat-select>
+        </mat-form-field>
+        </div>
+       
+       
+        <div class="flex" style="height: 50px">
+            <!-- <mat-form-field
+                class="fuse-mat-emphasized-affix w-80 "
+                appearance="fill"
+            >
+                <span matPrefix >Chọn theme</span>
+                <mat-select >
+                    <mat-option
+                        [value]="item.id"
+                        *ngFor="let item of themes"
+                        (click)="onSelect(item)"
+                        >{{ item.title ? item.title : "" }}</mat-option
+                    >
+                </mat-select>
+            </mat-form-field> -->
+
+            <!-- <mat-form-field
+                class="fuse-mat-emphasized-affix w-80 mx-5 "
+                appearance="fill"
+            >
+                <span matPrefix>Chọn Menu </span>
+                <mat-select (selectionChange)="onSelectId($event.value)">
+                    <mat-option
+                        [value]="item.id"
+                        *ngFor="let item of menu"
+                        
+                        >{{ item.title }}</mat-option
+                    >
+                </mat-select>
+            </mat-form-field> -->
+        </div>
+
+        <div class="form-group py-5">
+            <button
+                type="submit"
+                (click)="onSubmit()"
+                [disabled]="!themeSanphamchitietForm.valid"
+                class="px-3 py-1 bg-green-600 rounded-lg text-white"
+            >
+                Submit
+            </button>
+
+            <button
+                type="update"
+                class="px-3 py-1 bg-indigo-600 rounded-lg mx-10 text-white"
+                (click)="updateThemeSanphamchitiet()"
+            >
+                Update
+            </button>
+
+            <button
+                type="delete"
+                class="px-3 py-1 bg-red-600 rounded-lg text-white"
+                (click)="deleteThemeSanphamchitiet()"
+            >
+                Delete
+            </button>
+        </div>
+    </form>
+</div>

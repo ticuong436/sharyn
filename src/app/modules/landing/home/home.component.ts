@@ -32,6 +32,7 @@ export class LandingHomeComponent
             slug: 'blog',
             id: 4,
         },
+        
         {
             title: 'KHÁM DA ONLINE',
             parentid: '',
@@ -39,10 +40,28 @@ export class LandingHomeComponent
             id: 5,
         },
         {
-            title: 'COMPO ĐIỀU TRỊ',
+            title: 'COMBO ĐIỀU TRỊ',
             parentid: 1,
             slug: 'combo-dieu-tri',
             id: 6,
+        },
+        {
+            title: 'Giới thiệu',
+            parentid: 4,
+            slug: 'gioi-thieu',
+            id: 7,
+        },
+        {
+            title: 'Sharyn love skin',
+            parentid: 4,
+            slug: 'blog',
+            id: 8,
+        },
+        {
+            title: 'liên hệ',
+            parentid: 4,
+            slug: 'lien-he',
+            id: 9,
         },
         
     ];

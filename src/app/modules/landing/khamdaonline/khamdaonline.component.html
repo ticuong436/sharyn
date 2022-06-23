@@ -68,22 +68,49 @@
                     hiệu quả và chính xác nhé
                 </p>
             </div>
-            <div class="py-7">
+            <form class="py-7" [formGroup]="userAddressValidations">
                 <p>Thông tin liên hệ:</p>
-                <div class="flex">
-                    <a class="p-2 bg-gray-200 mr-1 border-r border-black"
-                        >+84</a
-                    >
-                    <input class="border-b border-black w-72" type="number" />
+                <div>
+                    <div class="flex">
+                        <a
+                            class="py-2 w-12 text-center bg-gray-200 mr-1 border-r border-black"
+                            >+84</a
+                        >
+                        <input
+                            class="border-b border-black w-72"
+                            type="number"
+                            [formControlName]="'mobile'"
+                        />
+                    </div>
+                    <div class="pt-2 ml-12" *ngIf="submitted == false">
+                        <mat-error
+                            *ngIf="
+                                userAddressValidations
+                                    .get('mobile')
+                                    .hasError('required')
+                            "
+                        >
+                            Vui lòng nhập số điện thoại
+                        </mat-error>
+                        <mat-error
+                            *ngIf="
+                                userAddressValidations
+                                    .get('mobile')
+                                    .hasError('pattern')
+                            "
+                        >
+                            Số điện thoại không đúng định dạng
+                        </mat-error>
+                    </div>
                 </div>
-            </div>
-            <a
-               
+            </form>
+            <button
                 class="text-center text-2xl cursor-pointer py-1 font-bold uppercase md:w-96 w-72 rounded-2xl border border-black"
-                routerLink="../tinhtrang"
-                >
+                type="submit"
+                (click)="onSubmit()"
+            >
                 tư vấn ngay
-            </a>
+            </button>
         </div>
     </div>
 </div>

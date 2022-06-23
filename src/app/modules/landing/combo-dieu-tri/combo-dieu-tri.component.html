@@ -84,11 +84,11 @@
                             <div
                                 class="absolute w-full h-full top-0 opacity-70 z-0 img-overlay"
                             ></div>
-                            <div
+                            <!-- <div
                                 class="absolute top-0 right-3 pt-2 pb-1 px-1 text-xl rounded-b-xl text-white bg-red-500 font-bold sale-popup"
                             >
                                 50%
-                            </div>
+                            </div> -->
                         </div>
                         <div
                             class="pt-3 flex flex-col items-center justify-center"
@@ -126,109 +126,69 @@
             </div>
             <div class="w-full bg-black" style="height: 1px"></div>
         </div>
-        <div class="grid md:hidden lg:grid-cols-4 grid-cols-2 gap-4 pt-5 pb-5">
-            <div class="lg:h-68" *ngFor="let item of products">
-                <a
-                    class="flex flex-col text-black h-full product-item"
-                    href="#"
-                >
-                    <div class="w-full lg:h-full h-40 relative overflow-hidden">
-                        <div
-                            class="absolute w-full h-full top-0 opacity-70 z-0 img-overlay"
-                        ></div>
-                        <img
-                            src="{{ item.image }}"
-                            class="w-full h-full cover-img"
-                            alt=""
-                        />
-                    </div>
-                    <div class="pt-3">
-                        <div class="relative">
-                            <p class="font-bold uppercase text-md md:text-base">
-                                {{ item.name }}
-                            </p>
-
-                            <div
-                                class="absolute bottom-0 lg:w-1/3 w-1/2 left-0 h-px bg-black"
-                            ></div>
-                        </div>
-                        <div class="flex items-center pt-1 md:pt-0">
-                            <p
-                                class="pr-2 mb-0 text-blue-500 lg:text-xl text-md"
-                            >
-                                {{ item.price }} đ
-                            </p>
-                            <!-- <div class="relative flex">
-                                <p class="text-xs mb-0">1.780.000đ</p>
-                                <div
-                                    class="absolute top-1/2 left-0 w-full rotate-line"
-                                ></div>
-                            </div> -->
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+    
         <swiper
             [pagination]="true"
             [config]="config"
-            class="mySwiper hidden lg:flex"
+            class="mySwiper  pt-5 pb-10"
         >
-          <ng-template swiperSlide>
-                <div class="grid lg:grid-cols-4 grid-cols-2 gap-10 pt-5 pb-10">
-                    <div class="lg:h-68" *ngFor="let item of products">
-                        <a
-                            class="flex flex-col text-black h-full product-item"
-                            href="#"
-                        >
+            <ng-template swiperSlide *ngFor="let item of products">
+                <div class="lg:h-68">
+                    <a
+                        class="flex flex-col text-black h-full product-item"
+                        href="#"
+                    >
+                        <div class="w-full lg:h-full relative overflow-hidden">
                             <div
-                                class="w-full lg:h-full  relative overflow-hidden"
-                            >
-                                <div
-                                    class="absolute w-full h-full top-0 opacity-70 z-0 img-overlay"
-                                ></div>
-                                <img
-                                    src="{{ item.image }}"
-                                    class="w-full h-full cover-img"
-                                    alt=""
-                                />
-                                <div class="absolute right-2 top-2">
-                                    <a routerLink="giohang" class="p-1 rounded-full border border-gray-800 flex flex-col justify-center">
-                                       <img src="../../../../assets/images/homepage/HOME_SHARYN_1908-(3).png" class="w-5 h-5 object-contain" alt="">
-                                    </a>
-                                </div>
+                                class="absolute w-full h-full top-0 opacity-70 z-0 img-overlay"
+                            ></div>
+                            <img
+                                src="{{ item.image }}"
+                                class="w-full h-full cover-img"
+                                alt=""
+                            />
+                            <div class="absolute right-2 top-2">
+                                <a
+                                    routerLink="giohang"
+                                    class="p-1 rounded-full border border-gray-800 flex flex-col justify-center"
+                                >
+                                    <img
+                                        src="../../../../assets/images/homepage/HOME_SHARYN_1908-(3).png"
+                                        class="w-5 h-5 object-contain"
+                                        alt=""
+                                    />
+                                </a>
                             </div>
-                            <div class="pt-3">
-                                <div class="relative">
-                                    <p
-                                        class="font-bold uppercase text-md md:text-base"
-                                    >
-                                        {{ item.name }}
-                                    </p>
+                        </div>
+                        <div class="pt-3">
+                            <div class="relative">
+                                <p
+                                    class="font-bold uppercase text-md md:text-base one-dot"
+                                >
+                                    {{ item.name }}
+                                </p>
 
-                                    <div
-                                        class="absolute bottom-0 lg:w-1/3 w-1/2 left-0 h-px bg-black"
-                                    ></div>
-                                </div>
-                                <div class="flex items-center pt-1 md:pt-0">
-                                    <p
-                                        class="pr-2 mb-0 text-blue-500 lg:text-xl text-md"
-                                    >
-                                        {{ item.price }} đ
-                                    </p>
-                                    <!-- <div class="relative flex">
+                                <div
+                                    class="absolute bottom-0 lg:w-1/3 w-1/2 left-0 h-px bg-black"
+                                ></div>
+                            </div>
+                            <div class="flex items-center pt-1 md:pt-0">
+                                <p
+                                    class="pr-2 mb-0 text-blue-500 lg:text-xl text-md"
+                                >
+                                    {{ item.price | currency: "VND" }}
+                                </p>
+                                <!-- <div class="relative flex">
                                         <p class="text-xs mb-0">1.780.000đ</p>
                                         <div
                                             class="absolute top-1/2 left-0 w-full rotate-line"
                                         ></div>
                                     </div> -->
-                                </div>
                             </div>
-                        </a>
-                    </div>
-                </div> </ng-template
-            >
-          
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
         </swiper>
 
         <!-- <div

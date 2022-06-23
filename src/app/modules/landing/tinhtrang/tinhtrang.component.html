@@ -48,19 +48,21 @@
         </ol>
     </nav>
     <div class="md:py-20 py-10 mx-5 md:mx-0 tinhtrang">
-        <swiper [navigation]="true"  class="mySwiper">
-            <ng-template swiperSlide >
+        <swiper [navigation]="true" [speed]="700" class="mySwiper">
+            <ng-template swiperSlide>
                 <div class="flex flex-col items-center justify-center">
                     <div>
                         <div class="relative mb-5">
-                            <h3 class="md:text-2xl text-lg px-3 uppercase text-center">
+                            <h3
+                                class="md:text-2xl text-lg px-3 uppercase text-center"
+                            >
                                 Tình trạng da hiện tại của bạn?
                             </h3>
                             <div
                                 class="absolute h-px md:w-full w-72 px-5 bottom-0 bg-black centerX"
                             ></div>
                         </div>
-                        <div class="mx-auto ">
+                        <div class="mx-auto">
                             <div
                                 class="text-center delay-75 mb-3 hover:bg-blue-500 hover:text-white md:text-2xl text-lg px-3 cursor-pointer py-1 font-bold uppercase md:px-5 w-full rounded-2xl border border-black {{
                                     iTinhtrang == i
@@ -69,6 +71,7 @@
                                 }}"
                                 *ngFor="let item of tinhtrang; let i = index"
                                 (click)="getTinhtrang(i)"
+                                (click)="swipeNext()"
                             >
                                 {{ item }}
                             </div>
@@ -84,11 +87,13 @@
                     </div>
                 </div>
             </ng-template>
-            <ng-template swiperSlide >
+            <ng-template swiperSlide>
                 <div class="flex flex-col items-center justify-center h-full">
                     <div>
                         <div class="relative mb-5">
-                            <h3 class="md:text-2xl text-lg px-3 uppercase text-center">
+                            <h3
+                                class="md:text-2xl text-lg px-3 uppercase text-center"
+                            >
                                 Da bạn đang gặp vấn đề gì ?
                             </h3>
                             <div
@@ -98,9 +103,11 @@
                         <div class="flex flex-col">
                             <div
                                 class="option text-center delay-75 mb-3 hover:bg-blue-500 hover:text-white md:text-2xl text-lg px-3 cursor-pointer py-1 font-bold uppercase w-full md:px-5 rounded-2xl border border-black"
-                                *ngFor="let item of vande; let i =index"
-                                (click)="getVande(i)" 
-                                [ngClass]="{'bg-blue-500 text-white': iVande[i] == true}"
+                                *ngFor="let item of vande; let i = index"
+                                (click)="getVande(i)"
+                                [ngClass]="{
+                                    'bg-blue-500 text-white': iVande[i] == true
+                                }"
                             >
                                 {{ item }}
                             </div>
@@ -108,7 +115,7 @@
                     </div>
                     <div class="pt-10 py-5 flex flex-col">
                         <a
-                            class="text-center md:text-2xl text-lg px-3 cursor-pointer py-1 font-bold uppercase w-72 rounded-2xl border border-black"
+                            class="text-center md:text-2xl hover:bg-blue-500 hover:text-white text-lg px-3 cursor-pointer py-1 font-bold uppercase w-72 rounded-2xl border border-black"
                             routerLink="/ket-qua-tu-van"
                         >
                             tư vấn ngay

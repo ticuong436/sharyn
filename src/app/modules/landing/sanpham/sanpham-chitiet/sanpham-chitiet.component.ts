@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import SwiperCore, { Navigation,Pagination,FreeMode, Autoplay } from "swiper";
+import SwiperCore, { Navigation, Pagination, FreeMode, Autoplay } from 'swiper';
 SwiperCore.use([Pagination, FreeMode, Navigation, Autoplay]);
 @Component({
     selector: 'app-sanpham-chitiet',
@@ -14,7 +14,9 @@ export class SanphamChitietComponent implements OnInit {
             des: '<p>TINH THỂ THẦN KỲ NUÔI DƯỠNG TÁI TẠO </br> PHỤC HỒI DA THẦN TỐC &nbsp;</p>',
             status: '50%',
             slug: 'miracle-ex-spicule',
-            price: '2,5ml - 890.000',
+            khoiluong: '2,5ml',
+
+            price: '1780000',
             priceold: 1780000,
             image: {
                 1: '../../../../../assets/images/SẢN PHẨM CHI TIẾT/MIRACLE/MIRACLE-01.png',
@@ -30,7 +32,8 @@ export class SanphamChitietComponent implements OnInit {
             des: '<p>THẦN DƯỢC DÀNH RIÊNG CHO LÀN DA  <br/> KHÔNG TUỔI &nbsp;</p>',
             status: '50%',
             slug: 'dna-sharyn',
-            price: '30ml - 1.200.000',
+            price: '2000000',
+            khoiluong: '30ml',
 
             priceold: 2000000,
             image: {
@@ -47,7 +50,9 @@ export class SanphamChitietComponent implements OnInit {
             des: '<p>SERUM TẾ BÀO GỐC PHỤC HỒI, TÁI TẠO <br/> VÀ CĂNG BÓNG DA &nbsp;</p>',
             status: '50%',
             slug: 'ha-ampoule',
-            price: '20ml - 590.000',
+            khoiluong: '20ml',
+
+            price: '1580000',
 
             priceold: 1580000,
 
@@ -65,7 +70,8 @@ export class SanphamChitietComponent implements OnInit {
             des: '<p>KEM DƯỠNG - CHỐNG NẮNG - TRẺ HÓA <br/> KIÊM LỚP NỀN TRANG ĐIỂM HOÀN HẢO &nbsp;</p>',
             status: '50%',
             slug: 'cream-4in1',
-            price: '50ml - 800.000',
+            price: '1600000',
+            khoiluong: '50ml',
 
             priceold: 1600000,
 
@@ -83,7 +89,8 @@ export class SanphamChitietComponent implements OnInit {
             des: '<p>VIÊN UỐNG CHỐNG NẮNG - TRẮNG DA &nbsp;</p>',
             status: '50%',
             slug: 'pearly',
-            price: 'Hộp 90 viên - 1.800.000',
+            khoiluong: 'Hộp 90 viên',
+            price: '1600000',
 
             priceold: 1800000,
 
@@ -101,8 +108,8 @@ export class SanphamChitietComponent implements OnInit {
             des: '<p>KEM CHỐNG NẮNG 3IN1 – THOÁNG MỊN DA <br/> KHÔNG NHỜN RÍT &nbsp;</p>',
             status: '50%',
             slug: 'intensive-uv-sunblock-cream',
-            price: '50ml - 550.000',
-
+            price: '1100000',
+            khoiluong: '50ml',
             priceold: 1100000,
 
             image: {
@@ -131,30 +138,31 @@ export class SanphamChitietComponent implements OnInit {
             },
         };
 
-        this.config1={
-            loop:true,
+        this.config1 = {
+            loop: true,
             autoplay: {
-              delay: 1500,
-              disableOnInteraction: false
+                delay: 2000,
+                disableOnInteraction: false,
             },
             breakpoints: {
-              320: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              
-              982:{
-                slidesPerView: 4,
-                spaceBetween: 20,
-      
-              }
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+
+                982: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
             },
-        
-              freeMode: true,
-              
-          }
+
+            freeMode: true,
+        };
         this.productDetail = this.products.find(
             (x) => x.slug == this.route.snapshot.params.slug
+        );
+        this.products = this.products?.filter(
+            (x) => x.id == this.productDetail.id
         );
     }
 }

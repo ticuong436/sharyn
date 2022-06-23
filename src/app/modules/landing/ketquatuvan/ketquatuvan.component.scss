@@ -14,6 +14,16 @@
         transition: 0.3s;
     }
 }
+.one-dot{
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.centerX-img{
+    transform: translateX(-50%);
+}
 .combo:hover {
     border: 1px solid rgb(130, 129, 129);
     transition: ease all 0.3s;

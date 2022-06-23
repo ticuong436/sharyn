@@ -35,6 +35,7 @@ import { LienheComponent } from '../lienhe/lienhe.component';
 import { GiohangComponent } from '../giohang/giohang.component';
 import { SigninComponent } from '../signin/signin.component';
 import { BannerFormComponent } from '../components/banner-form/banner-form.component';
+import { DangkyComponent } from '../dangky/dangky.component';
 
 registerLocaleData(localeDe, 'de-DE', localeDeExtra);
 
@@ -63,7 +64,8 @@ registerLocaleData(localeDe, 'de-DE', localeDeExtra);
         LienheComponent,
         GiohangComponent,
         SigninComponent,
-        BannerFormComponent
+        BannerFormComponent,
+        DangkyComponent
     ],
     providers: [
         {

@@ -18,6 +18,13 @@
 .center-info {
   transform: translateY(-50%);
 }
+.one-dot{
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
 .banner-text{
     left: 33%;
     bottom: 5rem;

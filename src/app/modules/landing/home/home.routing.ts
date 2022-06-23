@@ -15,6 +15,7 @@ import { KetquatuvanComponent } from '../ketquatuvan/ketquatuvan.component';
 import { LienheComponent } from '../lienhe/lienhe.component';
 import { GiohangComponent } from '../giohang/giohang.component';
 import { SigninComponent } from '../signin/signin.component';
+import { DangkyComponent } from '../dangky/dangky.component';
 
 export const landingHomeRoutes: Route[] = [
     {
@@ -45,6 +46,7 @@ export const landingHomeRoutes: Route[] = [
             },
             { path: 'giohang', component: GiohangComponent },
             { path: 'dang-nhap', component: SigninComponent },
+            { path: 'dang-ky', component: DangkyComponent },
         ],
     },
 ];

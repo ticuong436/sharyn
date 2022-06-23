@@ -95,7 +95,7 @@
             <div class="grid lg:grid-cols-3 grid-cols-1 gap-10">
                 <div class="item-product" *ngFor="let item of products">
                     <a
-                        class="flex flex-col items-center text-black h-full product-item "
+                        class="flex flex-col items-center text-black h-full product-item"
                         routerLink="{{ item.slug }}"
                     >
                         <div class="w-full relative overflow-hidden h-3/5">
@@ -108,7 +108,12 @@
                                 class="absolute w-full h-full top-0 opacity-70 z-0 img-overlay"
                             ></div>
                             <div
-                                class="absolute top-0 right-3 pt-2 pb-1 px-1 text-xl text-white bg-red-500 font-bold sale-popup"
+                                class="absolute top-0 right-3 pt-2 text-white pb-1 px-1 text-xl  font-bold sale-popup {{
+                                    item.status == 'Promo'
+                                        ? 'bg-blue-500'
+                                      
+                                        : 'bg-red-500'
+                                }}"
                             >
                                 {{ item.status }}
                             </div>
@@ -118,17 +123,17 @@
                             ></div>
                         </div>
                         <div
-                            class=" flex flex-col items-center h-2/5 justify-between"
+                            class="flex flex-col items-center h-2/5 justify-between"
                         >
-                            <p class="font-bold text-2xl uppercase text-center pt-3">
+                            <p
+                                class="font-bold text-2xl uppercase text-center pt-3"
+                            >
                                 {{ item.name }}
                             </p>
                             <span class="uppercase text-lg text-center">
-                                {{item.desnoibat}}
+                                {{ item.desnoibat }}
                             </span>
-                            <div
-                                class="price text-base font-bold text-3xl"
-                            >
+                            <div class="price text-base font-bold text-3xl">
                                 {{ item.price | currency: "VND" }}
                             </div>
                             <div
@@ -160,7 +165,7 @@
                     class="flex flex-col text-black h-full product-item"
                     href="#"
                 >
-                    <div class="w-full  h-40 relative overflow-hidden ">
+                    <div class="w-full h-40 relative overflow-hidden">
                         <div
                             class="absolute w-full h-full top-0 opacity-70 z-0 img-overlay"
                         ></div>
@@ -172,7 +177,9 @@
                     </div>
                     <div class="pt-3">
                         <div class="relative">
-                            <p class="font-bold uppercase text-xs md:text-md">
+                            <p
+                                class="font-bold uppercase text-xs md:text-md one-dot"
+                            >
                                 {{ item.name }}
                             </p>
 

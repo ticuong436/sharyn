@@ -15,7 +15,7 @@
             <div class="p-5 space-y-1 flex flex-col">
                 <a
                     routerLink="/"
-                    class="text-lg uppercase pb-4 rounded-md text-sm font-medium"
+                    class="text-lg uppercase rounded-md text-sm font-medium py-2"
                     aria-current="page"
                     (click)="drawer.toggle()"
                     >Trang Chủ</a
@@ -25,7 +25,7 @@
                         <mat-expansion-panel-header>
                             <mat-panel-title>
                                 <p
-                                    class="text-lg uppercase py-4 rounded-md text-sm font-medium"
+                                    class="text-lg uppercase rounded-md text-sm font-medium py-2"
                                 >
                                     cửa hàng
                                 </p>
@@ -35,33 +35,60 @@
                         <div class="pl-3 flex flex-col">
                             <a
                                 routerLink="san-pham"
-                                class="text-lg uppercase py-4 rounded-md text-sm font-medium"
+                                class="text-lg uppercase rounded-md text-sm font-medium py-2"
                                 aria-current="page"
                                 (click)="drawer.toggle()"
                                 >Sản phẩm</a
                             >
                             <a
                                 routerLink="combo-dieu-tri"
-                                class="text-lg uppercase py-4 rounded-md text-sm font-medium"
+                                class="text-lg uppercase rounded-md text-sm font-medium py-2"
                                 aria-current="page"
                                 (click)="drawer.toggle()"
                                 >combo điều trị</a
                             >
                         </div>
                     </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <p
+                                    class="text-lg uppercase rounded-md text-sm font-medium py-2"
+                                >
+                                    về sharyn
+                                </p>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+                        <div class="pl-3 flex flex-col">
+                            <a
+                                routerLink="gioi-thieu"
+                                class="text-lg uppercase rounded-md text-sm font-medium py-2"
+                                aria-current="page"
+                                (click)="drawer.toggle()"
+                                >giiới thiêu</a
+                            >
+                            <a
+                                routerLink="blog"
+                                class="text-lg uppercase rounded-md text-sm font-medium py-2"
+                                aria-current="page"
+                                (click)="drawer.toggle()"
+                                >sharyn love skin</a
+                            >
+                            <a
+                                routerLink="lien-he"
+                                class="text-lg uppercase rounded-md text-sm font-medium py-2"
+                                aria-current="page"
+                                (click)="drawer.toggle()"
+                                >liên hệ</a
+                            >
+                        </div>
+                    </mat-expansion-panel>
                 </mat-accordion>
 
                 <a
-                    routerLink="blog"
-                    class="text-lg uppercase py-4 rounded-md text-sm font-medium"
-                    aria-current="page"
-                    (click)="drawer.toggle()"
-                    >Về Sharyn</a
-                >
-
-                <a
                     routerLink="kham-da"
-                    class="text-lg uppercase py-4 rounded-md text-sm font-medium"
+                    class="text-lg uppercase rounded-md text-sm font-medium py-2"
                     aria-current="page"
                     (click)="drawer.toggle()"
                     >Khám da online</a
@@ -96,7 +123,7 @@
             >
                 <div class="text-sm links flex">
                     <div
-                        class="dropdown relative"
+                        class="dropdown relative menu-item"
                         *ngFor="let itemmenu of menu"
                     >
                         <div
@@ -108,7 +135,6 @@
                                 id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
-                                (mouseenter)="toggleMenu()"
                             >
                                 <a
                                     routerLink=""
@@ -135,14 +161,11 @@
                         </ng-template>
 
                         <ul
-                            class="dropdown-menu min-w-max absolute bg-white mt-2 z-50 float-left py-2 list-none text-left rounded-lg shadow-lg m-0 bg-clip-padding border-none"
-                            [ngClass]="{ hidden: isShow }"
-                            (mouseleave)="toggleMenu()"
+                            class="list-menu dropdown-menu min-w-max absolute bg-white mt-2 z-50 float-left py-2 list-none text-left rounded-lg shadow-lg m-0 bg-clip-padding border-none"
                             *ngIf="itemmenu.children.length > 0"
                         >
                             <li
                                 *ngFor="let item of itemmenu.children"
-                                (click)="toggleMenu()"
                             >
                                 <a
                                     class="block uppercase text-black lg:inline-block lg:mt-0 mx-4 line-hover text-lg"
